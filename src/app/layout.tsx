@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import { Metadata } from 'next';
+import NextTopLoader from 'nextjs-toploader';
 
 export const metadata: Metadata = {
   title: 'Next Boilerplate',
@@ -18,7 +19,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <NextTopLoader color="green" />
+
+        {children}
+      </body>
     </html>
   );
 }
