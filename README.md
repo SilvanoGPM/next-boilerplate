@@ -1,5 +1,5 @@
 <h1 align="center">Next Boilerplate</h1>
-<p align="center"> Boilerplate for NextJS projects</p>
+<p align="center"> Boilerplate for NextJS projects with app directory</p>
 
 <p align="center">
   <img src="public/icons/android-chrome-192x192.png" />
@@ -22,10 +22,10 @@ In terminal use:
 
 ```bash
 # npm
-npx create-next-app -e https://github.com/SilvanoGPM/next-boilerplate
+npx create-next-app -e https://github.com/SilvanoGPM/next-boilerplate-with-app
 
 # yarn
-yarn create next-app -e https://github.com/SilvanoGPM/next-boilerplate
+yarn create next-app -e https://github.com/SilvanoGPM/next-boilerplate-with-app
 ```
 
 ## ❤️ Contributions
