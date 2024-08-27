@@ -1,12 +1,12 @@
-import { ReactNode } from 'react';
 import { Metadata } from 'next';
 import NextTopLoader from 'nextjs-toploader';
+import { ReactNode } from 'react';
 
 export const metadata: Metadata = {
   title: 'Next Boilerplate',
   description: 'Boilerplate for NextJS projects',
 
-  themeColor: '#FFFFFF',
+  themeColor: '#FFFFFFF',
 
   manifest: '/manifest.json',
 

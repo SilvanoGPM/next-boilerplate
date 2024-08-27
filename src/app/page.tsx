@@ -1,11 +1,11 @@
 import { Metadata } from 'next';
 
-import { Main } from '$components/main';
+import { HomeView } from '$views/home';
 
 export const metadata: Metadata = {
   title: 'Home',
 };
 
 export default function Home() {
-  return <Main />;
+  return <HomeView />;
 }

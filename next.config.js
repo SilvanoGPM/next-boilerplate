@@ -9,9 +9,14 @@ const withPWA = require('next-pwa')({
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
 };
 
-module.exports = withPWA({
-  ...nextConfig,
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
 });
+
+module.exports = withBundleAnalyzer(
+  withPWA({
+    ...nextConfig,
+  }),
+);

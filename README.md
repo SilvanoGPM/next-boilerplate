@@ -1,24 +1,24 @@
 <h1 align="center">Next Boilerplate</h1>
-<p align="center"> Boilerplate for NextJS projects with app directory</p>
+<p align="center"> Boilerplate para NextJS com a pasta app</p>
 
 <p align="center">
   <img src="public/icons/android-chrome-192x192.png" />
 </p>
 
-## ⚙️ Already configured
+## ⚙️ Configurações já feitas
 
 - Typescript
 - Jest
 - React Testing Library
-- PWA Support
 - ESLint
 - Prettier
 - Editorconfig
 - Husky
+- PWA
 
-## 🔨 How to use
+## 🔨 Como utilizar
 
-In terminal use:
+No terminal utilize:
 
 ```bash
 # npm
@@ -28,6 +28,9 @@ npx create-next-app -e https://github.com/SilvanoGPM/next-boilerplate-with-app
 yarn create next-app -e https://github.com/SilvanoGPM/next-boilerplate-with-app
 ```
 
-## ❤️ Contributions
+## ✏️ Altere nomes nesses arquivos
 
-Open a PR to contribute to the project.
+- [package.json](./package.json)
+- [manifest.json](./public/manifest.json)
+- [layout.tsx](./src/app/layout.tsx)
+- [page.tsx](./src/app/page.tsx)

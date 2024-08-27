@@ -1,6 +1,12 @@
 {
   "name": "Next Boilerplate",
   "short_name": "Boilerplate",
+  "theme_color": "#FFFFFF",
+  "description": "Boilerplate for NextJS projects",
+  "background_color": "#FFFFFF",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
   "icons": [
     {
       "src": "/icons/android-chrome-192x192.png",
@@ -12,11 +18,5 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-  ],
-  "theme_color": "#FFFFFF",
-  "description": "Boilerplate for NextJS projects",
-  "background_color": "#FFFFFF",
-  "start_url": "/",
-  "display": "standalone",
-  "orientation": "portrait"
+  ]
 }

@@ -7,13 +7,14 @@ const { compilerOptions } = require('./tsconfig.json');
 module.exports = {
   testEnvironment: 'jsdom',
   testPathIgnorePatterns: ['/node_modules/', '/.next/'],
+
   collectCoverage: true,
   collectCoverageFrom: [
-    'src/**/*.tsx',
+    'src/**/*.ts(x)?',
     '!src/**/*.{spec,test}.tsx',
-    '!src/pages/_app.tsx',
-    '!src/pages/_document.tsx',
+    '!src/app/**/*',
   ],
+
   setupFilesAfterEnv: ['<rootDir>/.jest/setup.ts'],
 
   transform: {
@@ -27,5 +28,6 @@ module.exports = {
       prefix: '<rootDir>',
     }),
     '^.+\\.module\\.(css|sass|scss)$': 'identity-obj-proxy',
+    '\\.(gif|ttf|eot|svg|png)$': '<rootDir>/.jest/mocks/file.js',
   },
 };
