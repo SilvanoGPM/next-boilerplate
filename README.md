@@ -9,12 +9,17 @@
 
 - Typescript
 - Jest
+- Playwright
+- MSW
 - React Testing Library
 - ESLint
 - Prettier
 - Editorconfig
 - Husky
 - PWA
+- Bundle Analyzer
+- Sitemap.xml
+- Robots.txt
 
 ## 🔨 Como utilizar
 

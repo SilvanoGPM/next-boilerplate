@@ -35,3 +35,9 @@ yarn-error.log*
 public/sw.js
 public/workbox-*.js
 
+# playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/tests-examples

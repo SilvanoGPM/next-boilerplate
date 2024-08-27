@@ -1,16 +1,17 @@
 import { createEnv } from '@t3-oss/env-nextjs';
 import { z } from 'zod';
 
-const nodeEnv = z.enum(['development', 'production', 'test']);
-
 export const env = createEnv({
-  client: {},
+  client: {
+    NEXT_PUBLIC_MODE: z.literal('test').optional(),
+  },
 
   shared: {
-    NODE_ENV: nodeEnv,
+    NODE_ENV: z.enum(['test', 'development', 'production']),
   },
 
   runtimeEnv: {
     NODE_ENV: process.env.NODE_ENV,
+    NEXT_PUBLIC_MODE: process.env.NEXT_PUBLIC_MODE,
   },
 });
