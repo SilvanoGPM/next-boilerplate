@@ -3,6 +3,8 @@ import dynamic from 'next/dynamic';
 import NextTopLoader from 'nextjs-toploader';
 import { ReactNode } from 'react';
 
+import '$styles/globals.css';
+
 const EnableMSW = dynamic(
   () => import('$api/mocks/mws').then((mod) => mod.EnableMSW),
   { ssr: false },
@@ -26,7 +28,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="pt-BR" suppressHydrationWarning>
       <body>
         <EnableMSW />
         <NextTopLoader color="green" />

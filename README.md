@@ -8,6 +8,7 @@
 ## ⚙️ Configurações já feitas
 
 - Typescript
+- Tailwind
 - Jest
 - Playwright
 - MSW
