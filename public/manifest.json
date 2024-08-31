@@ -1,8 +1,8 @@
 {
   "name": "Next Boilerplate",
   "short_name": "Boilerplate",
-  "theme_color": "#FFFFFF",
   "description": "Boilerplate for NextJS projects",
+  "theme_color": "#FFFFFF",
   "background_color": "#FFFFFF",
   "start_url": "/",
   "display": "standalone",

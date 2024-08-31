@@ -1,5 +1,5 @@
 <h1 align="center">Next Boilerplate</h1>
-<p align="center"> Boilerplate para NextJS com a pasta app</p>
+<p align="center">Boilerplate para NextJS com a pasta app</p>
 
 <p align="center">
   <img src="public/icons/android-chrome-192x192.png" />
