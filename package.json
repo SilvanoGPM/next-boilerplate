@@ -16,6 +16,7 @@
     "test:report": "playwright show-report"
   },
   "dependencies": {
+    "@million/lint": "^1.0.0-rc.84",
     "@next/bundle-analyzer": "^14.2.7",
     "@t3-oss/env-nextjs": "0.9.1",
     "next": "^14.2.7",

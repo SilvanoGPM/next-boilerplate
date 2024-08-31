@@ -41,3 +41,6 @@ public/workbox-*.js
 /blob-report/
 /playwright/.cache/
 /tests-examples
+
+# Million Lint
+.million

@@ -1,3 +1,3 @@
 export function Example() {
-  return <h1>Component Example</h1>;
+  return <h1>Componente de Exemplo</h1>;
 }

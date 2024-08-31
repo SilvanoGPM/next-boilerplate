@@ -3,12 +3,13 @@ import { render, screen } from '@testing-library/react';
 import { Example } from '.';
 
 describe('<Example />', () => {
-  test('should render the example component', () => {
+  test('deve renderizar o componente de exemplo', () => {
     const { container } = render(<Example />);
 
     const expected = screen.getByRole('heading', {
-      name: /component example/i,
+      name: /componente de exemplo/i,
     });
+
     expect(expected).toBeInTheDocument();
 
     expect(container.firstChild).toMatchSnapshot();

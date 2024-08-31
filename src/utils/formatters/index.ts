@@ -1,7 +1,7 @@
 /**
  * Pluraliza uma palavra com base no número fornecido.
  *
- * @param  n - O número para determinar a pluralização.
+ * @param n - O número para determinar a pluralização.
  * @param singular - A forma singular da palavra.
  * @param plural - A forma plural da palavra. Se não fornecida, será gerada adicionando 's' ao singular.
  * @param useNumber - Se true, inclui o número no resultado (padrão: true).
@@ -30,14 +30,19 @@ export function pluralize(
  */
 export function formatPrice(
   value: string | number,
-  locale = 'pt-BR',
-  { currency = 'BRL', ...options }: Intl.NumberFormatOptions = {},
+  {
+    locale = 'pt-BR',
+    currency = 'BRL',
+    ...options
+  }: Intl.NumberFormatOptions & { locale?: string } = {},
 ) {
   return new Intl.NumberFormat(locale, {
     style: 'currency',
     currency,
     ...options,
-  }).format(Number(String(value).replaceAll(',', '.')));
+  })
+    .format(Number(String(value).replaceAll(',', '.')))
+    .replace(/[\s\uFEFF\xA0]+/g, ' '); // Remover espaços invisíveis
 }
 
 /**
@@ -53,6 +58,7 @@ export function getOnlyNumbers(string: string) {
  * Formata um número de telefone, removendo todos os caracteres não numéricos e organizando-o no estilo +55 01 23456-7890.
  *
  * @param {string | number} phone - O número de telefone a ser formatado. Pode ser uma string ou um número.
+ *
  * @returns {string} - O número de telefone formatado.
  *
  * @example
@@ -60,11 +66,17 @@ export function getOnlyNumbers(string: string) {
  *
  * @example
  * formatPhoneNumber(5521912345678); // -> "+55 11 92345-6789"
+ *
+ * @throws Se o `phone` for menor que 13 caracteres. (`Número de telefone inválido`)
  */
 export function formatPhoneNumber(phone: string | number): string {
   const phoneStr = String(phone);
 
   const onlyNumbers = getOnlyNumbers(phoneStr);
+
+  if (onlyNumbers.length < 13) {
+    throw new Error('Número de telefone inválido');
+  }
 
   const country = onlyNumbers.slice(0, 2);
   const area = onlyNumbers.slice(2, 4);

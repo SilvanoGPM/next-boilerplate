@@ -5,6 +5,10 @@
  * @param percentage - O valor alfa em porcentagem (0 a 100, padrão: 100).
  */
 export function toAlphaHex(hex?: string, percentage = 100) {
+  if (hex?.length === 4) {
+    hex += hex.slice(1);
+  }
+
   if (!hex?.startsWith('#') || hex.length !== 7) {
     return hex;
   }

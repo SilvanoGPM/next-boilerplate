@@ -6,13 +6,16 @@ const { compilerOptions } = require('./tsconfig.json');
 
 module.exports = {
   testEnvironment: 'jsdom',
-  testPathIgnorePatterns: ['/node_modules/', '/.next/'],
+  testPathIgnorePatterns: ['/node_modules/', '/.next/', '/e2e/'],
 
   collectCoverage: true,
+
   collectCoverageFrom: [
     'src/**/*.ts(x)?',
     '!src/**/*.{spec,test}.tsx',
+    '!src/api/mocks/**/*s',
     '!src/app/**/*',
+    '!src/views/**/*',
   ],
 
   setupFilesAfterEnv: ['<rootDir>/.jest/setup.ts'],

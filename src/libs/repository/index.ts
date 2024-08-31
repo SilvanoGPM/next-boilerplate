@@ -11,10 +11,10 @@ export class Repository {
    * @param key - A chave sob a qual o valor será salvo.
    * @param value - O valor a ser salvo, pode ser um objeto ou qualquer outro tipo.
    */
-  static save<T>(key: string, value: Record<string, unknown> | T): void {
-    const valueString = JSON.stringify(value);
-
+  static save<T extends Record<string, unknown>>(key: string, value: T): void {
     try {
+      const valueString = JSON.stringify({ data: value });
+
       Repository.storage?.setItem(key, valueString);
     } catch (err) {
       console.error(err);
@@ -29,7 +29,12 @@ export class Repository {
   static get<T>(key: string): T | null | undefined {
     try {
       const value = Repository.storage?.getItem(key);
-      return value ? (JSON.parse(value) as T) : null;
+
+      if (value) {
+        const { data } = JSON.parse(value);
+
+        return data as T;
+      }
     } catch (err) {
       console.error(err);
     }

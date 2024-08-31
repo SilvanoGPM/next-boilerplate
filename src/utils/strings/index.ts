@@ -4,10 +4,6 @@
  * @param string - A string a ser convertida.
  */
 export function titleString(string: string) {
-  if (!string) {
-    return;
-  }
-
   return string[0].toUpperCase() + string.slice(1).toLowerCase();
 }
 
@@ -17,11 +13,7 @@ export function titleString(string: string) {
  * @param string - A string a ser separada.
  * @param delimitter - O delimitador para separar a string (padrão: ' ').
  */
-export function getFirstString(string?: string, delimitter = ' ') {
-  if (!string) {
-    return;
-  }
-
+export function getFirstString(string: string, delimitter = ' ') {
   return string.split(delimitter)[0];
 }
 

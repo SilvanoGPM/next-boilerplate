@@ -1,4 +1,4 @@
-import { useCallback, useRef } from 'react';
+import { useCallback, useEffect, useRef } from 'react';
 
 /**
  * Hook personalizado para debouncing de funções.
@@ -24,6 +24,15 @@ export function useDebounce(delay = 1500, notDelayInFistTime = false) {
     },
     [delay],
   );
+
+  // Previne que o debounce seja executado depois do hook ser desmontado
+  useEffect(() => {
+    return () => {
+      if (debouncing.current) {
+        clearTimeout(debouncing.current);
+      }
+    };
+  }, []);
 
   return { debounce, timeoutId: debouncing };
 }
