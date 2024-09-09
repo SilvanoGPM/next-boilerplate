@@ -44,29 +44,42 @@
       }
     ],
 
-    "import/order": [
+    "no-unused-vars": [
       "warn",
       {
+        "vars": "all",
+        "args": "after-used",
+        "ignoreRestSiblings": true,
+        "varsIgnorePattern": "^_"
+      }
+    ],
+
+    "import/order": [
+      "error",
+      {
+        "newlines-between": "always",
+        "newline-after-import": "always",
+        "pathGroups": [
+          {
+            "pattern": "\\$/**",
+            "group": "external",
+            "position": "after"
+          }
+        ],
         "groups": [
           "builtin",
           "external",
-          ["internal", "parent", "sibling", "index"],
-          "unknown"
-        ],
-        "pathGroups": [
-          {
-            "pattern": "$**",
-            "group": "internal",
-            "position": "before"
-          }
-        ],
-        "pathGroupsExcludedImportTypes": ["builtin"],
-        "alphabetize": {
-          "order": "asc",
-          "caseInsensitive": true
-        },
-        "newlines-between": "always"
+          "internal",
+          "unknown",
+          "parent",
+          "sibling",
+          "index",
+          "object",
+          "type"
+        ]
       }
-    ]
+    ],
+
+    "import/newline-after-import": ["error", { "count": 1 }]
   }
 }
