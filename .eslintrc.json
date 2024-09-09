@@ -44,13 +44,13 @@
       }
     ],
 
-    "no-unused-vars": [
-      "warn",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "warn", // or "error"
       {
-        "vars": "all",
-        "args": "after-used",
-        "ignoreRestSiblings": true,
-        "varsIgnorePattern": "^_"
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_",
+        "caughtErrorsIgnorePattern": "^_"
       }
     ],
 
