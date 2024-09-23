@@ -6,7 +6,7 @@ import { ReactNode } from 'react';
 import '$styles/globals.css';
 
 const EnableMSW = dynamic(
-  () => import('$api/mocks/mws').then((mod) => mod.EnableMSW),
+  () => import('$app/api/mocks/mws').then((mod) => mod.EnableMSW),
   { ssr: false },
 );
 

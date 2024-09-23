@@ -1,6 +1,6 @@
-import type { MetadataRoute } from 'next';
-
 import { getBaseUrl } from '$utils/metadata';
+
+import type { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [

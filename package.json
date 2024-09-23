@@ -8,6 +8,7 @@
     "analyze": "cross-env ANALYZE=true next build",
     "start": "next start",
     "lint": "eslint src --fix",
+    "format": "prettier --write \"src/**/*.{ts,tsx}\" ",
     "prepare": "husky install",
     "test": "jest",
     "test:watch": "npm run test -- --watch",
